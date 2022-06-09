@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int    @id @default(autoincrement())
+  name          String @unique
+  email         String @unique
+  password      String
+  Bet           Bet[]
+  contestWinner Team   @relation(fields: [teamId], references: [id]) 
+  teamId        Int    
+}
+
+model Team {
+  id      Int    @id @default(autoincrement())
+  apiId   Int
+  name    String
+  flagUrl String
+  gamesA  Game[] @relation("teamA")
+  gamesB  Game[] @relation("teamB")
+  User    User[]
+}
+
+model Game {
+  id      Int      @id @default(autoincrement())
+  apiId   Int
+  teamAId Int
+  teamA   Team     @relation("teamA", fields: [teamAId], references: [id])
+  teamBId Int
+  teamB   Team     @relation("teamB", fields: [teamBId], references: [id])
+  date    DateTime
+  Bet     Bet[]
+  Score   Score[]
+}
+
+model Bet {
+  id     Int  @id @default(autoincrement())
+  game   Game @relation(fields: [gameId], references: [id])
+  gameId Int
+  user   User @relation(fields: [userId], references: [id])
+  userId Int
+  scoreA Int
+  scoreB Int
+}
+
+model Score {
+  id     Int      @id @default(autoincrement())
+  date   DateTime
+  scoreA Int
+  scoreB Int
+  gameId Int
+  game   Game     @relation(fields: [gameId], references: [id])
+}
