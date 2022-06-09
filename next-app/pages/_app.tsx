@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import "./styles/globalStyles.css";
-import { Provider } from "../lib/context";
-import { Middleware } from "../lib/Middleware";
+import { Provider } from "../lib/frontend/middleware/context";
+import { Middleware } from "../lib/frontend/middleware/Middleware";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

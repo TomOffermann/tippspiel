@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { comparePasswords } from "../../lib/comparePasswords";
-import prisma from "../../lib/prisma";
+import { comparePasswords } from "../../lib/backend/utils/comparePasswords";
+import prisma from "../../lib/backend/database/prisma";
 import jsonwebtoken from "jsonwebtoken";
 import Cookies from "cookies";
-import { getUser } from "../../lib/getUser";
+import { getUser } from "../../lib/backend/utils/getUser";
 require("dotenv").config();
 
 const jwtSecret = process.env.JWT_SECRET;

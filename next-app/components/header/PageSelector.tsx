@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
-import { Screen, useScreen } from "../lib/useScreen";
-import { betPage, optionPage, Pages, tablePage } from "../pages";
-import Button from "./Button";
-import Icons from "./Icons";
+import { tweak } from "../../lib/frontend/utils/color";
+import { Context } from "../../lib/frontend/middleware/context";
+import { Screen, useScreen } from "../../lib/frontend/utils/useScreen";
+import { betPage, optionPage, Pages, tablePage } from "../../pages";
+import Button from "../elements/Button";
+import Icons from "../elements/Icons";
 
 interface PageSelectorProps {
   setPage: (page: Pages) => void;

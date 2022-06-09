@@ -1,12 +1,12 @@
 import Router from "next/router";
 import React, { useContext } from "react";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
-import { useScreen, Screen } from "../lib/useScreen";
-import Button from "./Button";
-import DropDownMenu from "./DropDownMenu";
-import Icons from "./Icons";
-import Timer from "./Timer";
+import { tweak } from "../../lib/frontend/utils/color";
+import { Context } from "../../lib/frontend/middleware/context";
+import { useScreen, Screen } from "../../lib/frontend/utils/useScreen";
+import Button from "../elements/Button";
+import DropDownMenu from "../elements/DropDownMenu";
+import Icons from "../elements/Icons";
+import Timer from "../elements/Timer";
 
 interface NavbarProps {
   username: string;

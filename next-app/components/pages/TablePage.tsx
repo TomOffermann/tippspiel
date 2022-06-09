@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useContext } from "react";
-import { tweak } from "../lib/color";
-import { Context, HiddenUser } from "../lib/context";
+import { tweak } from "../../lib/frontend/utils/color";
+import { Context, HiddenUser } from "../../lib/frontend/middleware/context";
 
 export const TablePage: React.FC = () => {
   const { state, update } = useContext(Context);

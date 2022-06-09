@@ -1,6 +1,6 @@
 import { Bet, Game, Score, Team } from "@prisma/client";
 import React, { useEffect } from "react";
-import { Color, defaultColor } from "./color";
+import { Color, defaultColor } from "../utils/color";
 
 export interface User {
   name: string;

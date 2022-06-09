@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { ApplicationData } from "../../lib/context";
-import { getUser } from "../../lib/getUser";
-import prisma from "../../lib/prisma";
+import { ApplicationData } from "../../lib/frontend/middleware/context";
+import { getUser } from "../../lib/backend/utils/getUser";
+import prisma from "../../lib/backend/database/prisma";
 
 require("dotenv").config();
 

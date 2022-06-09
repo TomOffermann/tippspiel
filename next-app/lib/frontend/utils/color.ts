@@ -1,5 +1,5 @@
 import { ColorPalette, computeColorPalette } from "./colorPalette";
-import { ApplicationState } from "./context";
+import { ApplicationState } from "../middleware/context";
 
 function getColorMode(): boolean {
   let colorMode = window.localStorage.getItem("colorMode");

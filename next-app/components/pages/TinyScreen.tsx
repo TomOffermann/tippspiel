@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
+import { tweak } from "../../lib/frontend/utils/color";
+import { Context } from "../../lib/frontend/middleware/context";
 
 function TinyScreen() {
   const { state, update } = useContext(Context);

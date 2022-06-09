@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { tweak } from "../lib/color";
-import { ColorPalette } from "../lib/colorPalette";
-import { Context } from "../lib/context";
+import { tweak } from "../../lib/frontend/utils/color";
+import { ColorPalette } from "../../lib/frontend/utils/colorPalette";
+import { Context } from "../../lib/frontend/middleware/context";
 
 export interface LoadingSpinnerPageProps {
   noCtx?: boolean;

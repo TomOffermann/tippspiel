@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { LoadingSpinner } from "../components/LoadingSpinner";
-import Navbar from "../components/Navbar";
-import { OptionPage } from "../components/OptionPage";
+import { LoadingSpinner } from "../components/elements/LoadingSpinner";
+import Navbar from "../components/header/Navbar";
+import { OptionPage } from "../components/pages/OptionPage";
 import { PageSelector } from "../components/PageSelector";
-import { SetWinner } from "../components/SetWinner";
-import { TablePage } from "../components/TablePage";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
+import { SetWinner } from "../components/subpages/SetWinner";
+import { TablePage } from "../components/pages/TablePage";
+import { tweak } from "../lib/frontend/utils/color";
+import { Context } from "../lib/frontend/middleware/context";
 
 export const optionPage = {
   name: "Optionen",

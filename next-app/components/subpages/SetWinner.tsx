@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { Context } from "../lib/context";
-import { LoadingSpinner } from "./LoadingSpinner";
+import { Context } from "../../lib/frontend/middleware/context";
+import { LoadingSpinner } from "../elements/LoadingSpinner";
 import Image from "next/image";
-import { tweak } from "../lib/color";
+import { tweak } from "../../lib/frontend/utils/color";
 
-import { useScreen, Screen } from "../lib/useScreen";
+import { useScreen, Screen } from "../../lib/frontend/utils/useScreen";
 
 export const SetWinner: React.FC = () => {
   const { state, update } = useContext(Context);

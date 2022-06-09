@@ -1,7 +1,7 @@
 import { MouseEventHandler, useContext, useState } from "react";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
-import { Screen, useScreen } from "../lib/useScreen";
+import { tweak } from "../../lib/frontend/utils/color";
+import { Context } from "../../lib/frontend/middleware/context";
+import { Screen, useScreen } from "../../lib/frontend/utils/useScreen";
 
 interface IconButtonProps {
   spacing?: string;

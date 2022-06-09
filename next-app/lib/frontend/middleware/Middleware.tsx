@@ -1,11 +1,11 @@
 import Router from "next/router";
 import React, { useContext, useEffect, useState } from "react";
-import { LoadingSpinnerPage } from "../components/LoadingSpinner";
-import TinyScreen from "../components/TinyScreen";
-import { useColor } from "./color";
-import { computeColorPalette } from "./colorPalette";
+import { LoadingSpinnerPage } from "../../../components/elements/LoadingSpinner";
+import TinyScreen from "../../../components/pages/TinyScreen";
+import { useColor } from "../utils/color";
+import { computeColorPalette } from "../utils/colorPalette";
 import { ApplicationData, Context } from "./context";
-import { Screen, useScreen } from "./useScreen";
+import { Screen, useScreen } from "../utils/useScreen";
 
 export const Middleware: React.FC = (props) => {
   const { state, update } = useContext(Context);

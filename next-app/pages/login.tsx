@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import Button from "../components/Button";
-import { tweak } from "../lib/color";
-import { Context } from "../lib/context";
+import Button from "../components/elements/Button";
+import { tweak } from "../lib/frontend/utils/color";
+import { Context } from "../lib/frontend/middleware/context";
 
 interface ResultState {
   code: number | null;
